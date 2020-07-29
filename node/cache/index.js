@@ -7,6 +7,20 @@ const fs = require("fs")
 const url = require("url")
 const mime = require("mime")
 
+/**
+ * 是否开启协商缓存
+ * @type {boolean}
+ */
+const IS_NEGOTIATE_CACHE = true;
+/**
+ * 缓存的类型
+ * @type {{modified: boolean, etag: boolean}}
+ */
+const NEGOTIATE_CACHE_TYPES = {
+  'modified': true,
+  'etag': true
+}
+
 const server = http.createServer(onRequest)
 
 function onRequest(req, res) {
@@ -26,38 +40,20 @@ function onRequest(req, res) {
         res.setHeader("Content-Type", `${type}; charset=utf8`)
       })
     } else {
-      let modified = req.headers["if-modified-since"]
-      let etag = req.headers['etag']
       const filePath = path.join(staticDirPath, pathname)
-      fs.stat(filePath, function (err, stats) {
-        if (err) {
-          throw new Error(err.message)
-        }
+      /**
+       * 在不开启协商缓存的情况
+       */
+      if (!IS_NEGOTIATE_CACHE) {
+        content = fs.readFileSync(filePath)
+        type = mime.getType(filePath)
+        return setHeader(res, content, () => {
+          res.setHeader("Cache-Control", "max-age=60")
+          res.setHeader("Content-Type", `${type}; charset=utf8`)
+        })
+      }
 
-        if (etag) {
-
-        }
-
-        let mtime = toUTCTime(stats.mtime)
-        /**
-         * 协商缓存, 如果客户端缓存资源依然新鲜, 服务器资源未发生改变, 则使用客户端缓存
-         */
-        if (modified === mtime) {
-          res.statusCode = 304
-          setHeader(res,  () => {
-            res.setHeader("Content-Type", `${type}; charset=utf8`)
-            res.setHeader("Last-Modified", toUTCTime(mtime))
-          })
-          res.end()
-        } else {
-          content = fs.readFileSync(filePath)
-          type = mime.getType(filePath)
-          setHeader(res, content, () => {
-            res.setHeader("Content-Type", `${type}; charset=utf8`)
-            res.setHeader("Last-Modified", toUTCTime(mtime))
-          })
-        }
-      })
+      send(req, res, filePath)
     }
   } else {
     res.end(`
@@ -71,17 +67,56 @@ function setHeader(res, content, fn) {
     fn = content
     content = ""
   }
-  // 缓存 5s
-  res.setHeader("Cache-Control", "no-cache")
   // res.setHeader("Pragma", "no-cache")
-  // 缓存 10s
   // res.setHeader("Expires", new Date(Date.now() + 1000 * 10).toGMTString())
-  fn()
+  res.setHeader("Cache-Control", "no-cache")
+  fn && fn()
   res.end(content)
 }
 
 function toUTCTime(time) {
   return new Date(time).toUTCString()
+}
+
+function send (req, res, filePath) {
+  let modified = req.headers["if-modified-since"]
+  let etag = req.headers['etag']
+  let type, mtime, content;
+
+  fs.stat(filePath, function (err, stats) {
+    if (err) {
+      throw new Error(err.message)
+    }
+
+    type = mime.getType(filePath)
+    mtime = toUTCTime(stats.mtime)
+    res.setHeader("Content-Type", `${type}; charset=utf8`)
+
+    if (etag) {
+
+    }
+
+    /**
+     * 协商缓存, 如果客户端缓存资源依然新鲜, 服务器资源未发生改变, 则使用客户端缓存
+     */
+    if (modified === mtime) {
+      res.statusCode = 304
+      setHeader(res,  () => {
+        res.setHeader("Last-Modified", toUTCTime(mtime))
+      })
+    }
+
+    if (NEGOTIATE_CACHE_TYPES.etag) {
+
+    }
+
+    if (NEGOTIATE_CACHE_TYPES.modified) {
+      res.setHeader("Last-Modified", toUTCTime(mtime))
+    }
+
+    content = fs.readFileSync(filePath)
+    setHeader(res, content)
+  })
 }
 
 server.listen(3001)
