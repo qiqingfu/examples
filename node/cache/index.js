@@ -6,12 +6,13 @@ const path = require("path")
 const fs = require("fs")
 const url = require("url")
 const mime = require("mime")
+const etag = require("etag")
 
 /**
  * 是否开启协商缓存
  * @type {boolean}
  */
-const IS_NEGOTIATE_CACHE = true;
+const IS_NEGOTIATE_CACHE = true
 /**
  * 缓存的类型
  * @type {{modified: boolean, etag: boolean}}
@@ -74,14 +75,30 @@ function setHeader(res, content, fn) {
   res.end(content)
 }
 
+/**
+ * 转换时间为 UTC  格式
+ * @param time
+ * @returns {string}
+ */
 function toUTCTime(time) {
   return new Date(time).toUTCString()
 }
 
-function send (req, res, filePath) {
+/**
+ * 生成 Etag 值
+ * @param stat
+ */
+function statTag(stat) {
+  var mtime = stat.mtime.getTime().toString(16)
+  var size = stat.size.toString(16)
+
+  return '"' + size + '-' + mtime + '"'
+}
+
+function send(req, res, filePath) {
   let modified = req.headers["if-modified-since"]
   let etag = req.headers['etag']
-  let type, mtime, content;
+  let type, mtime, content
 
   fs.stat(filePath, function (err, stats) {
     if (err) {
@@ -101,13 +118,14 @@ function send (req, res, filePath) {
      */
     if (modified === mtime) {
       res.statusCode = 304
-      setHeader(res,  () => {
+      return setHeader(res, () => {
         res.setHeader("Last-Modified", toUTCTime(mtime))
       })
     }
 
     if (NEGOTIATE_CACHE_TYPES.etag) {
-
+      let weak = statTag(stats)
+      res.setHeader("ETag", 'W/' + weak)
     }
 
     if (NEGOTIATE_CACHE_TYPES.modified) {
