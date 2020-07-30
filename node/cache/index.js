@@ -12,14 +12,14 @@ const etag = require("etag")
  * 是否开启协商缓存
  * @type {boolean}
  */
-const IS_NEGOTIATE_CACHE = true
+const IS_NEGOTIATE_CACHE = false
 /**
  * 缓存的类型
  * @type {{modified: boolean, etag: boolean}}
  */
 const NEGOTIATE_CACHE_TYPES = {
-  'modified': true,
-  'etag': true
+  'modified': false,
+  'etag': false
 }
 
 const server = http.createServer(onRequest)
@@ -49,7 +49,6 @@ function onRequest(req, res) {
         content = fs.readFileSync(filePath)
         type = mime.getType(filePath)
         return setHeader(res, content, () => {
-          res.setHeader("Cache-Control", "max-age=60")
           res.setHeader("Content-Type", `${type}; charset=utf8`)
         })
       }
@@ -69,8 +68,8 @@ function setHeader(res, content, fn) {
     content = ""
   }
   // res.setHeader("Pragma", "no-cache")
-  // res.setHeader("Expires", new Date(Date.now() + 1000 * 10).toGMTString())
-  res.setHeader("Cache-Control", "no-cache")
+  // res.setHeader("Expires", new Date(Date.now() + 1000 * 60 * 60 * 24 * 7).toGMTString())
+  res.setHeader("Cache-Control", "max-age=10")
   fn && fn()
   res.end(content)
 }
