@@ -6,7 +6,6 @@ const path = require("path")
 const fs = require("fs")
 const url = require("url")
 const mime = require("mime")
-const etag = require("etag")
 
 /**
  * 是否开启协商缓存
@@ -89,16 +88,16 @@ function toUTCTime(time) {
  * @param stat
  */
 function statTag(stat) {
-  var mtime = stat.mtime.getTime().toString(16)
-  var size = stat.size.toString(16)
+  const mtime = stat.mtime.getTime().toString(16)
+  const size = stat.size.toString(16)
 
   return '"' + size + '-' + mtime + '"'
 }
 
 function send(req, res, filePath) {
   let modified = req.headers["if-modified-since"]
-  let etag = req.headers['etag']
-  let type, mtime, content
+  let etag = req.headers['if-none-match']
+  let type, mtime, content, weak
 
   fs.stat(filePath, function (err, stats) {
     if (err) {
@@ -108,9 +107,16 @@ function send(req, res, filePath) {
     type = mime.getType(filePath)
     mtime = toUTCTime(stats.mtime)
     res.setHeader("Content-Type", `${type}; charset=utf8`)
+    weak = 'W/' + statTag(stats)
 
-    if (etag) {
-
+    /**
+     * 命中 Etag 协商缓存, 服务器资源为发生改变, 则使用客户端缓存
+     */
+    if (etag && etag === weak) {
+      res.statusCode = 304
+      return setHeader(res, () => {
+        res.setHeader("ETag", weak)
+      })
     }
 
     /**
@@ -124,8 +130,7 @@ function send(req, res, filePath) {
     }
 
     if (NEGOTIATE_CACHE_TYPES.etag) {
-      let weak = statTag(stats)
-      res.setHeader("ETag", 'W/' + weak)
+      res.setHeader("ETag", weak)
     }
 
     if (NEGOTIATE_CACHE_TYPES.modified) {
