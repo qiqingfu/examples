@@ -1,0 +1,6 @@
+2020-07-31 15:09:26,562 INFO 10764 [egg-schedule]: register schedule F:\learn\202007\egg-example\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2020-07-31 15:09:26,562 INFO 10764 [egg-schedule]: register schedule F:\learn\202007\egg-example\node_modules\egg-logrotator\app\schedule\clean_log.js
+2020-07-31 15:09:26,562 INFO 10764 [egg-schedule]: register schedule F:\learn\202007\egg-example\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2020-07-31 15:09:26,630 INFO 10764 [Timer] F:\learn\202007\egg-example\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 48033372ms at 2020-08-01 04:30:00.002
+2020-07-31 15:09:26,630 INFO 10764 [Timer] F:\learn\202007\egg-example\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 31833370ms at 2020-08-01 00:00:00.000
+2020-07-31 15:09:26,630 INFO 10764 [Timer] F:\learn\202007\egg-example\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 31834370ms at 2020-08-01 00:00:01.000
