@@ -3,15 +3,16 @@
  */
 
 // app/controller/news.js
-const Controller = require('egg').Controller
+const BaseController = require("../core/base_controller");
 
-class NewsController extends Controller {
+class NewsController extends BaseController {
   async list() {
     const ctx = this.ctx
+    console.log(ctx.queries)
     const page = ctx.query.page || 1
     const newsList = await ctx.service.news.list(page)
-    await this.service.some.list()
-    await ctx.render('news/list.tpl', {list: newsList})
+    this.success(newsList)
+    // await ctx.render('news/list.tpl', {list: newsList})
   }
 }
 

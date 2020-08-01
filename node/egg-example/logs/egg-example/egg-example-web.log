@@ -1,0 +1,215 @@
+2020-08-01 14:34:13,222 ERROR 19912 [-/::1/-/5ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (F:\learn\202007\egg-example\node_modules\egg\lib\application.js:266:15)
+    at Object.get cookies [as cookies] (F:\learn\202007\egg-example\node_modules\egg\app\extend\context.js:22:66)
+    at Object.get [egg-security#CSRF_SECRET] (F:\learn\202007\egg-example\node_modules\egg-security\app\extend\context.js:91:35)
+    at Object.ensureCsrfSecret (F:\learn\202007\egg-example\node_modules\egg-security\app\extend\context.js:104:13)
+    at csrf (F:\learn\202007\egg-example\node_modules\egg-security\lib\middlewares\csrf.js:15:11)
+    at dispatch (F:\learn\202007\egg-example\node_modules\koa-compose\index.js:42:32)
+    at F:\learn\202007\egg-example\node_modules\koa-compose\index.js:34:12
+    at dispatch (F:\learn\202007\egg-example\node_modules\koa-compose\index.js:42:32)
+    at session (F:\learn\202007\egg-example\node_modules\koa-session\index.js:41:13)
+    at dispatch (F:\learn\202007\egg-example\node_modules\koa-compose\index.js:42:32)
+
+pid: 19912
+hostname: DESKTOP-130PVM6
+
+2020-08-01 14:42:52,187 ERROR 15412 [-/::1/-/5ms GET /] nodejs.TypeError: ctx.logger.log is not a function
+    at F:\learn\202007\egg-example\app\middleware\report.js:9:16
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+
+pid: 15412
+hostname: DESKTOP-130PVM6
+
+2020-08-01 14:43:34,242 INFO 13596 [-/::1/-/7ms GET /] 请求时间: 6
+2020-08-01 14:43:34,526 INFO 13596 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0
+2020-08-01 14:43:45,439 INFO 13596 [-/::1/-/1ms GET /] 请求时间: 1
+2020-08-01 14:43:45,706 INFO 13596 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0
+2020-08-01 14:43:55,491 INFO 13596 [-/::1/-/1ms GET /] 请求时间: 0
+2020-08-01 14:43:55,796 INFO 13596 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0
+2020-08-01 14:44:05,438 INFO 10748 [-/::1/-/6ms GET /] 请求时间: 6ms
+2020-08-01 14:44:05,773 INFO 10748 [-/::1/-/1ms GET /favicon.ico] 请求时间: 1ms
+2020-08-01 14:46:55,781 INFO 6000 [-/::1/-/6ms GET /] 请求时间: 6ms
+2020-08-01 14:46:56,029 INFO 6000 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-01 14:50:36,085 INFO 19224 [-/::1/-/4ms GET /] 请求时间: 4ms
+2020-08-01 14:50:36,313 INFO 19224 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-01 14:50:49,515 INFO 18876 [-/::1/-/5ms GET /] 请求时间: 5ms
+2020-08-01 14:50:49,781 INFO 18876 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-01 14:51:00,779 INFO 18876 [-/::1/-/14ms GET /news?a=1&b=2] 请求时间: 13ms
+2020-08-01 14:51:00,818 INFO 18876 [-/::1/-/2ms GET /public/css/news.css] 请求时间: 2ms
+2020-08-01 14:51:52,083 INFO 19364 [-/::1/-/20ms GET /news?a=1&b=2] 请求时间: 20ms
+2020-08-01 14:51:52,132 INFO 19364 [-/::1/-/2ms GET /public/css/news.css] 请求时间: 2ms
+2020-08-01 14:51:52,372 INFO 19364 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-01 14:52:33,355 INFO 19364 [-/::1/-/3ms GET /news?a=1&b=2] 请求时间: 3ms
+2020-08-01 14:52:33,417 INFO 19364 [-/::1/-/1ms GET /public/css/news.css] 请求时间: 1ms
+2020-08-01 14:52:33,678 INFO 19364 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-01 15:02:29,021 INFO 13744 [-/::1/-/5ms GET /] 请求时间: 4ms
+2020-08-01 15:02:29,353 INFO 13744 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-01 15:02:34,227 INFO 13744 [-/::1/-/14ms GET /news] 请求时间: 14ms
+2020-08-01 15:02:34,274 INFO 13744 [-/::1/-/2ms GET /public/css/news.css] 请求时间: 1ms
+2020-08-01 15:03:09,604 INFO 11276 [-/::1/-/19ms GET /news] 请求时间: 18ms
+2020-08-01 15:03:09,761 INFO 11276 [-/::1/-/1ms GET /public/css/news.css] 请求时间: 1ms
+2020-08-01 15:03:09,910 INFO 11276 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-01 15:06:35,246 INFO 6856 [-/::1/-/17ms GET /news] 请求时间: 16ms
+2020-08-01 15:06:35,301 INFO 6856 [-/::1/-/2ms GET /public/css/news.css] 请求时间: 2ms
+2020-08-01 15:06:35,549 INFO 6856 [-/::1/-/1ms GET /favicon.ico] 请求时间: 1ms
+2020-08-01 15:07:19,150 INFO 13528 [-/::1/-/20ms GET /news] 请求时间: 20ms
+2020-08-01 15:07:19,234 INFO 13528 [-/::1/-/2ms GET /public/css/news.css] 请求时间: 2ms
+2020-08-01 15:07:19,458 INFO 13528 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-01 15:07:28,079 INFO 1656 [-/::1/-/21ms GET /news] 请求时间: 21ms
+2020-08-01 15:07:28,140 INFO 1656 [-/::1/-/2ms GET /public/css/news.css] 请求时间: 2ms
+2020-08-01 15:07:28,385 INFO 1656 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-01 15:07:37,963 INFO 7520 [-/::1/-/18ms GET /news] 请求时间: 17ms
+2020-08-01 15:07:38,019 INFO 7520 [-/::1/-/2ms GET /public/css/news.css] 请求时间: 2ms
+2020-08-01 15:07:38,261 INFO 7520 [-/::1/-/1ms GET /favicon.ico] 请求时间: 0ms
+2020-08-01 15:07:45,782 INFO 7680 [-/::1/-/21ms GET /news] 请求时间: 21ms
+2020-08-01 15:07:45,986 INFO 7680 [-/::1/-/2ms GET /public/css/news.css] 请求时间: 1ms
+2020-08-01 15:07:46,105 INFO 7680 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-01 15:23:10,337 INFO 12304 [-/::1/-/6ms GET /user/abc] 请求时间: 5ms
+2020-08-01 15:45:28,987 INFO 16784 [-/::1/-/5ms GET /search?a=1&b=2] 请求时间: 5ms
+2020-08-01 15:45:37,341 INFO 16784 [-/::1/-/1ms GET /search?a=1&b=2] 请求时间: 1ms
+2020-08-01 15:46:04,640 INFO 16784 [-/::1/-/0ms GET /search?name=zhangsan] 请求时间: 0ms
+2020-08-01 15:46:14,761 INFO 16784 [-/::1/-/1ms GET /search?name=lisi] 请求时间: 1ms
+2020-08-01 15:47:51,399 INFO 3996 [-/::1/-/6ms GET /user/1/zhangsan] 请求时间: 5ms
+2020-08-01 15:47:58,060 INFO 3996 [-/::1/-/2ms GET /user/1/zhangsan/lisi] 请求时间: 2ms
+2020-08-01 15:51:38,731 WARN 13416 [-/127.0.0.1/-/29ms POST /form] missing csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2020-08-01 15:51:38,732 WARN 13416 [-/127.0.0.1/-/30ms POST /form] nodejs.ForbiddenError: missing csrf token
+    at Object.throw (F:\learn\202007\egg-example\node_modules\koa\lib\context.js:97:11)
+    at Object.assertCsrf (F:\learn\202007\egg-example\node_modules\egg-security\app\extend\context.js:162:32)
+    at csrf (F:\learn\202007\egg-example\node_modules\egg-security\lib\middlewares\csrf.js:33:9)
+    at dispatch (F:\learn\202007\egg-example\node_modules\koa-compose\index.js:42:32)
+    at F:\learn\202007\egg-example\node_modules\koa-compose\index.js:34:12
+    at dispatch (F:\learn\202007\egg-example\node_modules\koa-compose\index.js:42:32)
+    at session (F:\learn\202007\egg-example\node_modules\koa-session\index.js:41:13)
+    at dispatch (F:\learn\202007\egg-example\node_modules\koa-compose\index.js:42:32)
+    at overrideMethod (F:\learn\202007\egg-example\node_modules\koa-override\index.js:38:12)
+    at dispatch (F:\learn\202007\egg-example\node_modules\koa-compose\index.js:42:32)
+message: "missing csrf token"
+pid: 13416
+hostname: DESKTOP-130PVM6
+
+2020-08-01 15:52:47,441 WARN 17116 [-/127.0.0.1/-/9ms POST /form] missing csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2020-08-01 15:52:47,442 WARN 17116 [-/127.0.0.1/-/10ms POST /form] nodejs.ForbiddenError: missing csrf token
+    at Object.throw (F:\learn\202007\egg-example\node_modules\koa\lib\context.js:97:11)
+    at Object.assertCsrf (F:\learn\202007\egg-example\node_modules\egg-security\app\extend\context.js:162:32)
+    at csrf (F:\learn\202007\egg-example\node_modules\egg-security\lib\middlewares\csrf.js:33:9)
+    at dispatch (F:\learn\202007\egg-example\node_modules\koa-compose\index.js:42:32)
+    at F:\learn\202007\egg-example\node_modules\koa-compose\index.js:34:12
+    at dispatch (F:\learn\202007\egg-example\node_modules\koa-compose\index.js:42:32)
+    at session (F:\learn\202007\egg-example\node_modules\koa-session\index.js:41:13)
+    at dispatch (F:\learn\202007\egg-example\node_modules\koa-compose\index.js:42:32)
+    at overrideMethod (F:\learn\202007\egg-example\node_modules\koa-override\index.js:38:12)
+    at dispatch (F:\learn\202007\egg-example\node_modules\koa-compose\index.js:42:32)
+message: "missing csrf token"
+pid: 17116
+hostname: DESKTOP-130PVM6
+
+2020-08-01 15:56:57,749 INFO 5692 [-/127.0.0.1/-/11ms POST /form] 请求时间: 11ms
+2020-08-01 15:57:15,363 INFO 2832 [-/::1/-/5ms GET /user/1/zhangsan] 请求时间: 4ms
+2020-08-01 15:57:15,719 INFO 2832 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-01 16:05:17,078 INFO 4684 [-/::1/-/4ms GET /user/1/zhangsan] 请求时间: 4ms
+2020-08-01 16:05:17,328 INFO 4684 [-/::1/-/1ms GET /favicon.ico] 请求时间: 0ms
+2020-08-01 16:05:20,014 INFO 4684 [-/::1/-/2ms GET /] 请求时间: 2ms
+2020-08-01 16:05:20,039 INFO 4684 [-/::1/-/12ms GET /news] 请求时间: 12ms
+2020-08-01 16:05:20,155 INFO 4684 [-/::1/-/2ms GET /public/css/news.css] 请求时间: 2ms
+2020-08-01 16:05:23,619 INFO 4684 [-/::1/-/1ms GET /] 请求时间: 1ms
+2020-08-01 16:05:23,635 INFO 4684 [-/::1/-/3ms GET /news] 请求时间: 3ms
+2020-08-01 16:05:23,679 INFO 4684 [-/::1/-/0ms GET /public/css/news.css] 请求时间: 0ms
+2020-08-01 16:06:06,655 INFO 19464 [-/::1/-/5ms GET /] 请求时间: 4ms
+2020-08-01 16:07:42,105 INFO 3560 [-/::1/-/6ms GET /search] 请求时间: 6ms
+2020-08-01 16:07:58,207 INFO 3560 [-/::1/-/1ms GET /?type=bing] 请求时间: 1ms
+2020-08-01 16:08:03,462 INFO 3560 [-/::1/-/1ms GET /search?type=bing] 请求时间: 1ms
+2020-08-01 16:08:24,246 INFO 3560 [-/::1/-/0ms GET /search?type=bing&q=zhihu] 请求时间: 0ms
+2020-08-01 16:09:26,444 INFO 11432 [-/::1/-/5ms GET /] 请求时间: 5ms
+2020-08-01 16:09:26,459 INFO 11432 [-/::1/-/1ms GET /search] 请求时间: 1ms
+2020-08-01 16:09:56,822 INFO 20756 [-/::1/-/5ms GET /] 请求时间: 5ms
+2020-08-01 16:09:56,838 INFO 20756 [-/::1/-/1ms GET /search] 请求时间: 1ms
+2020-08-01 16:10:20,291 INFO 10816 [-/::1/-/5ms GET /] 请求时间: 5ms
+2020-08-01 16:10:20,308 INFO 10816 [-/::1/-/2ms GET /search] 请求时间: 1ms
+2020-08-01 16:11:10,114 INFO 14116 [-/::1/-/6ms GET /] 请求时间: 5ms
+2020-08-01 16:11:10,832 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:10,844 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:10,857 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:10,875 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:10,895 INFO 14116 [-/::1/-/1ms GET /] 请求时间: 1ms
+2020-08-01 16:11:10,908 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:10,921 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:10,941 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:10,953 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:10,966 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:10,978 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:10,998 INFO 14116 [-/::1/-/1ms GET /] 请求时间: 0ms
+2020-08-01 16:11:11,015 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:11,031 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:11,047 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:11,061 INFO 14116 [-/::1/-/1ms GET /] 请求时间: 0ms
+2020-08-01 16:11:11,074 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:11,088 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:11,103 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:11,117 INFO 14116 [-/::1/-/0ms GET /] 请求时间: 0ms
+2020-08-01 16:11:22,711 INFO 14560 [-/::1/-/5ms GET /] 请求时间: 5ms
+2020-08-01 16:11:22,980 INFO 14560 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-01 16:51:29,949 INFO 9480 [-/::1/-/5ms GET /] 请求时间: 3ms
+2020-08-01 16:51:32,556 INFO 9480 [-/::1/-/1ms GET /news] 请求时间: 1ms
+2020-08-01 17:03:05,161 ERROR 10152 [-/::1/-/4ms GET /] nodejs.ReferenceError: ctx is not defined
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:17)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\learn\202007\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+
+pid: 10152
+hostname: DESKTOP-130PVM6
+
+2020-08-01 17:03:12,081 ERROR 10152 [-/::1/-/1ms GET /?id=1&id=2&id=3] nodejs.ReferenceError: ctx is not defined
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:17)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\learn\202007\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+
+pid: 10152
+hostname: DESKTOP-130PVM6
+
+2020-08-01 17:03:26,927 ERROR 10152 [-/::1/-/1ms GET /?id=1&id=2&id=3] nodejs.ReferenceError: ctx is not defined
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:17)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\learn\202007\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+
+pid: 10152
+hostname: DESKTOP-130PVM6
+
+2020-08-01 17:03:33,403 ERROR 10152 [-/::1/-/2ms GET /?id=1&id=2&id=3] nodejs.ReferenceError: ctx is not defined
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:17)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\learn\202007\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+
+pid: 10152
+hostname: DESKTOP-130PVM6
+
+2020-08-01 17:03:39,640 INFO 10152 [-/::1/-/2ms GET /news?id=1&id=2&id=3] 请求时间: 2ms
+2020-08-01 17:04:06,646 INFO 13164 [-/::1/-/7ms GET /news?id=1&id=2&id=3] 请求时间: 6ms
+2020-08-01 17:04:06,886 INFO 13164 [-/::1/-/1ms GET /favicon.ico] 请求时间: 1ms

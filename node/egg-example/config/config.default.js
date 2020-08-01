@@ -2,31 +2,34 @@
  * Created by qiqf on 2020/7/31
  */
 
-exports.keys = "qqf"
-
-// 添加 view 配置
-exports.view = {
-  defaultViewEngine: 'nunjucks',
-  mapping: {
-    '.tpl': 'nunjucks',
+module.exports = {
+  keys: "qqf",
+  view: {
+    defaultViewEngine: 'nunjucks',
+    mapping: {
+      '.tpl': 'nunjucks',
+    },
   },
-};
-
-exports.news = {
-  pageSize: 5,
-  serverUrl: 'https://hacker-news.firebaseio.com/v0',
-};
-
-// config/config.default.js
-// add middleware robot
-exports.middleware = [
-  'robot'
-]
-
-// robot's configurations
-exports.robot = {
-  ua: [
-    /curl/i,
-    /Baiduspider/i,
+  news: {
+    pageSize: 5,
+    serverUrl: 'https://hacker-news.firebaseio.com/v0',
+  },
+  // middleware
+  middleware: [
+    'compress',
+    'robot'
   ],
-};
+  // robot's configurations
+  robot: {
+    ua: [
+      /curl/i,
+      /Baiduspider/i,
+    ],
+    enable: true
+  },
+  // 框架内置的安全插件
+  security: {
+    csrf: false
+  }
+}
+

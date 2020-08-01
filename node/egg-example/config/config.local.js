@@ -6,3 +6,5 @@ exports.robot = {
     /Baiduspider/i,
   ],
 };
+
+exports.RUN = "本地开发环境"

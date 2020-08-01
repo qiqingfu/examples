@@ -6,7 +6,7 @@
       ".tpl": "F:\\learn\\202007\\egg-example\\config\\config.default.js"
     },
     "root": "F:\\learn\\202007\\egg-example\\node_modules\\egg-view\\config\\config.default.js",
-    "cache": "F:\\learn\\202007\\egg-example\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "F:\\learn\\202007\\egg-example\\node_modules\\egg-view\\config\\config.local.js",
     "defaultExtension": "F:\\learn\\202007\\egg-example\\node_modules\\egg-view\\config\\config.default.js"
   },
   "news": {
@@ -15,36 +15,20 @@
   },
   "middleware": "F:\\learn\\202007\\egg-example\\config\\config.default.js",
   "robot": {
-    "ua": "F:\\learn\\202007\\egg-example\\config\\config.default.js"
-  },
-  "session": {
-    "maxAge": "F:\\learn\\202007\\egg-example\\node_modules\\egg-session\\config\\config.default.js",
-    "key": "F:\\learn\\202007\\egg-example\\node_modules\\egg-session\\config\\config.default.js",
-    "httpOnly": "F:\\learn\\202007\\egg-example\\node_modules\\egg-session\\config\\config.default.js",
-    "encrypt": "F:\\learn\\202007\\egg-example\\node_modules\\egg-session\\config\\config.default.js"
+    "ua": "F:\\learn\\202007\\egg-example\\config\\config.local.js",
+    "enable": "F:\\learn\\202007\\egg-example\\config\\config.default.js"
   },
   "security": {
+    "csrf": "F:\\learn\\202007\\egg-example\\config\\config.default.js",
     "domainWhiteList": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
     "protocolWhiteList": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
     "defaultMiddleware": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
-    "csrf": {
-      "enable": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
-      "type": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
-      "ignoreJSON": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
-      "useSession": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
-      "cookieName": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
-      "sessionName": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
-      "headerName": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
-      "bodyName": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
-      "queryName": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
-      "refererWhiteList": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js"
-    },
     "xframe": {
       "enable": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
       "value": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js"
     },
     "hsts": {
-      "enable": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
+      "enable": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.local.js",
       "maxAge": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js",
       "includeSubdomains": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js"
     },
@@ -77,6 +61,13 @@
       "checkAddress": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js"
     }
   },
+  "RUN": "F:\\learn\\202007\\egg-example\\config\\config.local.js",
+  "session": {
+    "maxAge": "F:\\learn\\202007\\egg-example\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "F:\\learn\\202007\\egg-example\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "F:\\learn\\202007\\egg-example\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "F:\\learn\\202007\\egg-example\\node_modules\\egg-session\\config\\config.default.js"
+  },
   "helper": {
     "shtml": "F:\\learn\\202007\\egg-example\\node_modules\\egg-security\\config\\config.default.js"
   },
@@ -99,7 +90,7 @@
     "cookieMaxAge": "F:\\learn\\202007\\egg-example\\node_modules\\egg-i18n\\config\\config.default.js"
   },
   "watcher": {
-    "type": "F:\\learn\\202007\\egg-example\\node_modules\\egg-watcher\\config\\config.unittest.js",
+    "type": "F:\\learn\\202007\\egg-example\\node_modules\\egg-watcher\\config\\config.local.js",
     "eventSources": {
       "default": "F:\\learn\\202007\\egg-example\\node_modules\\egg-watcher\\config\\config.default.js",
       "development": "F:\\learn\\202007\\egg-example\\node_modules\\egg-watcher\\config\\config.default.js"
@@ -130,6 +121,13 @@
       "cron": "F:\\learn\\202007\\egg-example\\node_modules\\egg-multipart\\config\\config.default.js"
     }
   },
+  "development": {
+    "watchDirs": "F:\\learn\\202007\\egg-example\\node_modules\\egg-development\\config\\config.default.js",
+    "ignoreDirs": "F:\\learn\\202007\\egg-example\\node_modules\\egg-development\\config\\config.default.js",
+    "fastReady": "F:\\learn\\202007\\egg-example\\node_modules\\egg-development\\config\\config.default.js",
+    "reloadOnDebug": "F:\\learn\\202007\\egg-example\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideDefault": "F:\\learn\\202007\\egg-example\\node_modules\\egg-development\\config\\config.default.js"
+  },
   "logrotator": {
     "filesRotateByHour": "F:\\learn\\202007\\egg-example\\node_modules\\egg-logrotator\\config\\config.default.js",
     "hourDelimiter": "F:\\learn\\202007\\egg-example\\node_modules\\egg-logrotator\\config\\config.default.js",
@@ -152,7 +150,7 @@
     "throwOnUndefined": "F:\\learn\\202007\\egg-example\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
     "trimBlocks": "F:\\learn\\202007\\egg-example\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
     "lstripBlocks": "F:\\learn\\202007\\egg-example\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
-    "cache": "F:\\learn\\202007\\egg-example\\node_modules\\egg-view-nunjucks\\config\\config.default.js"
+    "cache": "F:\\learn\\202007\\egg-example\\node_modules\\egg-view-nunjucks\\config\\config.local.js"
   },
   "env": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
   "name": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
@@ -176,11 +174,13 @@
     "license": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "dependencies": {
       "egg": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
-      "egg-bin": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
       "egg-view-nunjucks": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
+      "koa-compress": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
+      "koa-is-json": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
       "moment": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js"
     },
     "devDependencies": {
+      "egg-bin": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
       "egg-mock": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js"
     }
   },
@@ -222,15 +222,17 @@
     "encoding": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "env": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "level": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
-    "consoleLevel": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.unittest.js",
+    "consoleLevel": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "disableConsoleAfterReady": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "outputJSON": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
-    "buffer": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.unittest.js",
+    "buffer": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "appLogName": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "coreLogName": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "agentLogName": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "errorLogName": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
-    "coreLogger": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
+    "coreLogger": {
+      "consoleLevel": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.local.js"
+    },
     "allowDebugAtProd": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js"
   },
   "httpclient": {

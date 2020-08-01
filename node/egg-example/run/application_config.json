@@ -16,19 +16,7 @@
       "domainWhiteList": [],
       "protocolWhiteList": [],
       "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
-      "csrf": {
-        "enable": true,
-        "type": "ctoken",
-        "ignoreJSON": false,
-        "useSession": false,
-        "cookieName": "csrfToken",
-        "sessionName": "csrfToken",
-        "headerName": "x-csrf-token",
-        "bodyName": "_csrf",
-        "queryName": "_csrf",
-        "refererWhiteList": [],
-        "matching": "<Function anonymous>"
-      },
+      "csrf": false,
       "xframe": {
         "enable": true,
         "value": "SAMEORIGIN",
@@ -101,13 +89,13 @@
         "F:\\learn\\202007\\egg-example\\node_modules\\egg-watcher\\config\\locales",
         "F:\\learn\\202007\\egg-example\\node_modules\\egg-schedule\\config\\locales",
         "F:\\learn\\202007\\egg-example\\node_modules\\egg-multipart\\config\\locales",
+        "F:\\learn\\202007\\egg-example\\node_modules\\egg-development\\config\\locales",
         "F:\\learn\\202007\\egg-example\\node_modules\\egg-logrotator\\config\\locales",
         "F:\\learn\\202007\\egg-example\\node_modules\\egg-static\\config\\locales",
         "F:\\learn\\202007\\egg-example\\node_modules\\egg-view\\config\\locales",
         "F:\\learn\\202007\\egg-example\\node_modules\\egg-view-nunjucks\\config\\locales",
-        "F:\\learn\\202007\\egg-example\\node_modules\\egg-mock\\config\\locales",
+        "F:\\learn\\202007\\egg-example\\lib\\plugin\\egg-ua\\config\\locales",
         "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\locales",
-        "F:\\learn\\202007\\egg-example\\node_modules\\egg-mock\\lib\\tmp\\config\\locales",
         "F:\\learn\\202007\\egg-example\\config\\locales"
       ],
       "queryField": "locale",
@@ -148,6 +136,13 @@
         "cron": "0 30 4 * * *"
       }
     },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": false,
+      "reloadOnDebug": true,
+      "overrideDefault": false
+    },
     "logrotator": {
       "filesRotateByHour": null,
       "hourDelimiter": "-",
@@ -169,7 +164,7 @@
       "root": [
         "F:\\learn\\202007\\egg-example\\app\\view"
       ],
-      "cache": true,
+      "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "nunjucks",
       "mapping": {
@@ -181,9 +176,9 @@
       "throwOnUndefined": false,
       "trimBlocks": false,
       "lstripBlocks": false,
-      "cache": true
+      "cache": false
     },
-    "env": "unittest",
+    "env": "local",
     "name": "egg-example",
     "keys": "<String len: 3>",
     "cookies": {},
@@ -206,11 +201,13 @@
       "license": "ISC",
       "dependencies": {
         "egg": "^2.27.0",
-        "egg-bin": "^4.15.0",
         "egg-view-nunjucks": "^2.2.0",
+        "koa-compress": "^5.0.1",
+        "koa-is-json": "^1.0.0",
         "moment": "^2.27.0"
       },
       "devDependencies": {
+        "egg-bin": "^4.15.0",
         "egg-mock": "^4.0.0"
       }
     },
@@ -250,17 +247,19 @@
     "logger": {
       "dir": "F:\\learn\\202007\\egg-example\\logs\\egg-example",
       "encoding": "utf8",
-      "env": "unittest",
+      "env": "local",
       "level": "INFO",
-      "consoleLevel": "WARN",
+      "consoleLevel": "INFO",
       "disableConsoleAfterReady": false,
       "outputJSON": false,
-      "buffer": false,
+      "buffer": true,
       "appLogName": "egg-example-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
       "errorLogName": "common-error.log",
-      "coreLogger": {},
+      "coreLogger": {
+        "consoleLevel": "WARN"
+      },
       "allowDebugAtProd": false,
       "type": "application"
     },
@@ -289,6 +288,7 @@
       "logging": false
     },
     "coreMiddleware": [
+      "report",
       "meta",
       "siteFile",
       "notfound",
@@ -296,9 +296,9 @@
       "bodyParser",
       "overrideMethod",
       "session",
-      "clusterAppMock",
       "securities",
-      "i18n"
+      "i18n",
+      "eggLoaderTrace"
     ],
     "workerStartTimeout": 600000,
     "serverTimeout": null,
@@ -319,14 +319,16 @@
       "serverUrl": "https://hacker-news.firebaseio.com/v0"
     },
     "middleware": [
+      "compress",
       "robot"
     ],
     "robot": {
       "ua": [
-        {},
         {}
-      ]
+      ],
+      "enable": true
     },
+    "RUN": "本地开发环境",
     "coreMiddlewares": "~config~coreMiddleware",
     "appMiddlewares": "~config~middleware",
     "appMiddleware": "~config~middleware",
@@ -440,6 +442,21 @@
       "path": "F:\\learn\\202007\\egg-example\\node_modules\\egg-multipart",
       "version": "2.10.3"
     },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\learn\\202007\\egg-example\\node_modules\\egg-development",
+      "version": "2.5.0"
+    },
     "logrotator": {
       "enable": true,
       "package": "egg-logrotator",
@@ -489,14 +506,14 @@
       "path": "F:\\learn\\202007\\egg-example\\node_modules\\egg-view-nunjucks",
       "version": "2.2.0"
     },
-    "egg-mock": {
+    "ua": {
       "enable": true,
-      "path": "F:\\learn\\202007\\egg-example\\node_modules\\egg-mock",
-      "name": "egg-mock",
+      "path": "F:\\learn\\202007\\egg-example\\lib\\plugin\\egg-ua",
+      "name": "ua",
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "version": "4.0.0"
+      "from": "F:\\learn\\202007\\egg-example\\config\\plugin.js"
     }
   }
 }
