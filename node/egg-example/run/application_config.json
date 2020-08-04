@@ -95,6 +95,7 @@
         "F:\\learn\\202007\\egg-example\\node_modules\\egg-view\\config\\locales",
         "F:\\learn\\202007\\egg-example\\node_modules\\egg-view-nunjucks\\config\\locales",
         "F:\\learn\\202007\\egg-example\\lib\\plugin\\egg-ua\\config\\locales",
+        "F:\\learn\\202007\\egg-example\\node_modules\\egg-mysql\\config\\locales",
         "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\locales",
         "F:\\learn\\202007\\egg-example\\config\\locales"
       ],
@@ -178,6 +179,14 @@
       "lstripBlocks": false,
       "cache": false
     },
+    "mysql": {
+      "default": {
+        "database": null,
+        "connectionLimit": 5
+      },
+      "app": true,
+      "agent": false
+    },
     "env": "local",
     "name": "egg-example",
     "keys": "<String len: 3>",
@@ -201,6 +210,7 @@
       "license": "ISC",
       "dependencies": {
         "egg": "^2.27.0",
+        "egg-mysql": "^3.0.0",
         "egg-view-nunjucks": "^2.2.0",
         "koa-compress": "^5.0.1",
         "koa-is-json": "^1.0.0",
@@ -514,6 +524,17 @@
       "optionalDependencies": [],
       "env": [],
       "from": "F:\\learn\\202007\\egg-example\\config\\plugin.js"
+    },
+    "mysql": {
+      "enable": true,
+      "package": "egg-mysql",
+      "name": "mysql",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "F:\\learn\\202007\\egg-example\\config\\plugin.js",
+      "path": "F:\\learn\\202007\\egg-example\\node_modules\\egg-mysql",
+      "version": "3.0.0"
     }
   }
 }

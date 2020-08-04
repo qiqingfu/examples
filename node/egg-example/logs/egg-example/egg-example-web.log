@@ -213,3 +213,176 @@ hostname: DESKTOP-130PVM6
 2020-08-01 17:03:39,640 INFO 10152 [-/::1/-/2ms GET /news?id=1&id=2&id=3] 请求时间: 2ms
 2020-08-01 17:04:06,646 INFO 13164 [-/::1/-/7ms GET /news?id=1&id=2&id=3] 请求时间: 6ms
 2020-08-01 17:04:06,886 INFO 13164 [-/::1/-/1ms GET /favicon.ico] 请求时间: 1ms
+2020-08-03 17:33:35,699 ERROR 14572 [-/::1/-/4ms GET /] nodejs.ReferenceError: ctx is not defined
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:33)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\learn\202007\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+
+pid: 14572
+hostname: DESKTOP-130PVM6
+
+2020-08-03 17:33:45,158 INFO 15740 [-/::1/-/4ms GET /] 请求时间: 4ms
+2020-08-03 17:33:45,359 INFO 15740 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-03 17:34:35,871 INFO 9476 [-/::1/-/4ms GET /] 请求时间: 4ms
+2020-08-03 17:34:36,095 INFO 9476 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-03 17:36:00,512 INFO 9380 [-/::1/-/4ms GET /] 请求时间: 4ms
+2020-08-03 17:36:00,744 INFO 9380 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-03 17:37:45,250 INFO 6268 [-/::1/-/5ms GET /] 请求时间: 4ms
+2020-08-03 17:37:45,500 INFO 6268 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-03 17:39:28,976 INFO 21364 [-/::1/-/7ms GET /] 请求时间: 6ms
+2020-08-03 17:39:29,200 INFO 21364 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-03 17:44:43,057 INFO 2376 [-/::1/-/4ms GET /cookie/add] 请求时间: 4ms
+2020-08-03 17:44:54,170 INFO 10608 [-/::1/-/5ms GET /cookie/add] 请求时间: 5ms
+2020-08-03 17:44:54,405 INFO 10608 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-03 17:44:56,002 INFO 10608 [-/::1/-/1ms GET /cookie/add] 请求时间: 1ms
+2020-08-03 17:44:56,185 INFO 10608 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-03 17:44:57,365 INFO 10608 [-/::1/-/1ms GET /cookie/add] 请求时间: 1ms
+2020-08-03 17:45:07,492 INFO 10608 [-/::1/-/0ms GET /cookie/add] 请求时间: 0ms
+2020-08-03 17:45:07,739 INFO 10608 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-03 17:45:09,587 INFO 10608 [-/::1/-/1ms GET /cookie/add] 请求时间: 1ms
+2020-08-03 17:45:09,878 INFO 10608 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-03 17:48:25,487 INFO 10608 [-/::1/-/1ms GET /cookie/remove] 请求时间: 1ms
+2020-08-03 17:48:34,056 INFO 10608 [-/::1/-/0ms GET /cookie/add] 请求时间: 0ms
+2020-08-03 17:48:34,350 INFO 10608 [-/::1/-/1ms GET /favicon.ico] 请求时间: 1ms
+2020-08-03 17:48:35,338 INFO 10608 [-/::1/-/0ms GET /cookie/add] 请求时间: 0ms
+2020-08-03 17:48:35,590 INFO 10608 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-03 17:48:37,651 INFO 10608 [-/::1/-/1ms GET /cookie/add] 请求时间: 1ms
+2020-08-03 17:48:37,894 INFO 10608 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-03 17:48:40,762 INFO 10608 [-/::1/-/1ms GET /cookie/remove] 请求时间: 1ms
+2020-08-03 17:48:52,780 INFO 10608 [-/::1/-/0ms GET /cookie/add] 请求时间: 0ms
+2020-08-03 17:48:53,046 INFO 10608 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 13:54:07,930 INFO 2344 [-/::1/-/18ms GET /] 请求时间: 17ms
+2020-08-04 13:54:14,975 INFO 2344 [-/::1/-/13ms GET /api/show] 请求时间: 13ms
+2020-08-04 13:54:20,671 ERROR 2344 [-/::1/-/6ms GET /api/posts] nodejs.TypeError: Cannot read property 'config' of undefined
+    at jsonp (F:\learn\202007\egg-example\node_modules\egg-jsonp\app\extend\application.js:16:33)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:195:33)
+    at dispatch (F:\learn\202007\egg-example\node_modules\koa-compose\index.js:42:32)
+    at robotMiddleware (F:\learn\202007\egg-example\app\middleware\robot.js:15:13)
+    at dispatch (F:\learn\202007\egg-example\node_modules\koa-compose\index.js:42:32)
+
+pid: 2344
+hostname: DESKTOP-130PVM6
+
+2020-08-04 13:56:12,434 INFO 6508 [-/::1/-/5ms GET /api/posts] 请求时间: 4ms
+2020-08-04 13:56:12,798 INFO 6508 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 13:57:55,790 INFO 6324 [-/::1/-/5ms GET /api/posts] 请求时间: 5ms
+2020-08-04 13:57:55,984 INFO 6324 [-/::1/-/1ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 13:58:18,116 INFO 6324 [-/::1/-/1ms GET /api/posts?_callback=fn] 请求时间: 1ms
+2020-08-04 15:00:20,755 INFO 16056 [-/::1/-/6ms GET /] 请求时间: 5ms
+2020-08-04 15:25:39,614 INFO 18024 [-/::1/-/6ms GET /] 请求时间: 6ms
+2020-08-04 15:25:39,840 INFO 18024 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 16:01:27,263 ERROR 21168 [-/::1/-/4ms GET /] nodejs.TypeError: Cannot read property 'query' of undefined
+    at Application.get myQuery [as myQuery] (F:\learn\202007\egg-example\app\extend\application.js:30:21)
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:49)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\learn\202007\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+
+pid: 21168
+hostname: DESKTOP-130PVM6
+
+2020-08-04 16:01:27,767 INFO 21168 [-/::1/-/1ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 16:02:24,194 ERROR 2948 [-/::1/-/4ms GET /] nodejs.TypeError: Cannot read property 'query' of undefined
+    at Object.query (F:\learn\202007\egg-example\node_modules\delegates\index.js:72:24)
+    at Application.get myQuery [as myQuery] (F:\learn\202007\egg-example\app\extend\application.js:30:25)
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:49)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\learn\202007\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+
+pid: 2948
+hostname: DESKTOP-130PVM6
+
+2020-08-04 16:02:24,631 INFO 2948 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 16:03:52,910 INFO 18472 [-/::1/-/4ms GET /] 请求时间: 4ms
+2020-08-04 16:03:53,125 INFO 18472 [-/::1/-/1ms GET /favicon.ico] 请求时间: 1ms
+2020-08-04 16:04:03,633 INFO 18472 [-/::1/-/1ms GET /?a=1&b=2] 请求时间: 1ms
+2020-08-04 16:04:35,247 INFO 16124 [-/::1/-/6ms GET /?a=1&b=2] 请求时间: 6ms
+2020-08-04 16:04:35,485 INFO 16124 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 16:06:08,876 INFO 18480 [-/::1/-/4ms GET /?a=1&b=2] 请求时间: 4ms
+2020-08-04 16:06:09,102 INFO 18480 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 16:06:22,957 INFO 20692 [-/::1/-/4ms GET /?a=1&b=2] 请求时间: 4ms
+2020-08-04 16:06:23,198 INFO 20692 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 16:06:38,058 ERROR 15852 [-/::1/-/4ms GET /?a=1&b=2] nodejs.TypeError: Cannot read property 'url' of undefined
+    at Object.get url [as url] (F:\learn\202007\egg-example\node_modules\koa\lib\request.js:78:21)
+    at Application.get myQuery [as myQuery] (F:\learn\202007\egg-example\app\extend\application.js:30:30)
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:49)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\learn\202007\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+
+pid: 15852
+hostname: DESKTOP-130PVM6
+
+2020-08-04 16:06:38,515 INFO 15852 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 16:07:18,486 INFO 4232 [-/::1/-/4ms GET /?a=1&b=2] 请求时间: 4ms
+2020-08-04 16:07:18,715 INFO 4232 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 16:07:28,964 ERROR 17064 [-/::1/-/4ms GET /?a=1&b=2] nodejs.TypeError: Cannot read property 'toJSON' of undefined
+    at Object.toJSON (F:\learn\202007\egg-example\node_modules\koa\lib\context.js:50:29)
+    at Object.inspect (F:\learn\202007\egg-example\node_modules\koa\lib\context.js:33:17)
+    at formatValue (internal/util/inspect.js:693:31)
+    at inspect (internal/util/inspect.js:264:10)
+    at formatWithOptions (internal/util/inspect.js:1865:40)
+    at Object.Console.<computed> (internal/console/constructor.js:281:10)
+    at Object.log (internal/console/constructor.js:291:61)
+    at Application.get myQuery [as myQuery] (F:\learn\202007\egg-example\app\extend\application.js:30:13)
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:49)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+
+pid: 17064
+hostname: DESKTOP-130PVM6
+
+2020-08-04 16:07:29,430 INFO 17064 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 16:07:53,478 INFO 3796 [-/::1/-/6ms GET /?a=1&b=2] 请求时间: 5ms
+2020-08-04 16:07:53,707 INFO 3796 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 16:08:02,195 INFO 2208 [-/::1/-/4ms GET /?a=1&b=2] 请求时间: 4ms
+2020-08-04 16:08:02,405 INFO 2208 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 16:08:13,037 INFO 11120 [-/::1/-/5ms GET /?a=1&b=2] 请求时间: 5ms
+2020-08-04 16:08:13,263 INFO 11120 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 16:09:13,457 INFO 17024 [-/::1/-/4ms GET /?a=1&b=2] 请求时间: 4ms
+2020-08-04 16:09:13,681 INFO 17024 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 16:09:31,102 ERROR 10224 [-/::1/-/4ms GET /?a=1&b=2] nodejs.TypeError: this.app.myCache.set is not a function
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:57)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\learn\202007\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+
+pid: 10224
+hostname: DESKTOP-130PVM6
+
+2020-08-04 16:09:31,558 INFO 10224 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms
+2020-08-04 16:09:56,796 INFO 5224 [-/::1/-/4ms GET /?a=1&b=2] 请求时间: 4ms
+2020-08-04 16:09:57,032 INFO 5224 [-/::1/-/1ms GET /favicon.ico] 请求时间: 1ms
+2020-08-04 16:54:52,347 INFO 20192 [-/::1/-/4ms GET /?a=1&b=2] 请求时间: 3ms
+2020-08-04 16:54:52,602 INFO 20192 [-/::1/-/0ms GET /favicon.ico] 请求时间: 0ms

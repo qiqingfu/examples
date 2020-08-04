@@ -80,3 +80,243 @@ hostname: DESKTOP-130PVM6
 pid: 10152
 hostname: DESKTOP-130PVM6
 
+2020-08-03 17:33:35,699 ERROR 14572 [-/::1/-/4ms GET /] nodejs.ReferenceError: ctx is not defined
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:33)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\learn\202007\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+
+pid: 14572
+hostname: DESKTOP-130PVM6
+
+2020-08-04 13:54:20,671 ERROR 2344 [-/::1/-/6ms GET /api/posts] nodejs.TypeError: Cannot read property 'config' of undefined
+    at jsonp (F:\learn\202007\egg-example\node_modules\egg-jsonp\app\extend\application.js:16:33)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:195:33)
+    at dispatch (F:\learn\202007\egg-example\node_modules\koa-compose\index.js:42:32)
+    at robotMiddleware (F:\learn\202007\egg-example\app\middleware\robot.js:15:13)
+    at dispatch (F:\learn\202007\egg-example\node_modules\koa-compose\index.js:42:32)
+
+pid: 2344
+hostname: DESKTOP-130PVM6
+
+2020-08-04 15:31:27,282 ERROR 18128 [Job#159652628728013200517286546001] F:\learn\202007\egg-example\app\schedule\update_cache.js execute error. TypeError: s.subscribe is not a function
+    at Object.task (F:\learn\202007\egg-example\node_modules\egg-schedule\lib\load_schedule.js:37:22)
+    at Messenger.<anonymous> (F:\learn\202007\egg-example\node_modules\egg-schedule\app.js:46:21)
+    at Messenger.emit (events.js:311:20)
+    at Messenger._onMessage (F:\learn\202007\egg-example\node_modules\egg\lib\core\messenger\ipc.js:116:12)
+    at process.emit (events.js:323:22)
+    at emit (internal/child_process.js:876:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+2020-08-04 15:31:27,282 ERROR 18128 [Job#159652628728013200517286546001] F:\learn\202007\egg-example\app\schedule\update_cache.js execute failed, used 1ms
+2020-08-04 15:32:27,283 ERROR 18128 [Job#159652634728213201117303064002] F:\learn\202007\egg-example\app\schedule\update_cache.js execute error. TypeError: s.subscribe is not a function
+    at Object.task (F:\learn\202007\egg-example\node_modules\egg-schedule\lib\load_schedule.js:37:22)
+    at Messenger.<anonymous> (F:\learn\202007\egg-example\node_modules\egg-schedule\app.js:46:21)
+    at Messenger.emit (events.js:311:20)
+    at Messenger._onMessage (F:\learn\202007\egg-example\node_modules\egg\lib\core\messenger\ipc.js:116:12)
+    at process.emit (events.js:323:22)
+    at emit (internal/child_process.js:876:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+2020-08-04 15:32:27,283 ERROR 18128 [Job#159652634728213201117303064002] F:\learn\202007\egg-example\app\schedule\update_cache.js execute failed, used 0ms
+2020-08-04 15:32:56,011 ERROR 8736 [Job#159652637600913201404575691001] F:\learn\202007\egg-example\app\schedule\update_cache.js execute error. TypeError: s.subscribe is not a function
+    at Object.task (F:\learn\202007\egg-example\node_modules\egg-schedule\lib\load_schedule.js:37:22)
+    at Messenger.<anonymous> (F:\learn\202007\egg-example\node_modules\egg-schedule\app.js:46:21)
+    at Messenger.emit (events.js:311:20)
+    at Messenger._onMessage (F:\learn\202007\egg-example\node_modules\egg\lib\core\messenger\ipc.js:116:12)
+    at process.emit (events.js:323:22)
+    at emit (internal/child_process.js:876:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+2020-08-04 15:32:56,011 ERROR 8736 [Job#159652637600913201404575691001] F:\learn\202007\egg-example\app\schedule\update_cache.js execute failed, used 0ms
+2020-08-04 15:32:59,013 ERROR 8736 [Job#159652637901113201434599227992] F:\learn\202007\egg-example\app\schedule\update_cache.js execute error. TypeError: s.subscribe is not a function
+    at Object.task (F:\learn\202007\egg-example\node_modules\egg-schedule\lib\load_schedule.js:37:22)
+    at Messenger.<anonymous> (F:\learn\202007\egg-example\node_modules\egg-schedule\app.js:46:21)
+    at Messenger.emit (events.js:311:20)
+    at Messenger._onMessage (F:\learn\202007\egg-example\node_modules\egg\lib\core\messenger\ipc.js:116:12)
+    at process.emit (events.js:323:22)
+    at emit (internal/child_process.js:876:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+2020-08-04 15:32:59,014 ERROR 8736 [Job#159652637901113201434599227992] F:\learn\202007\egg-example\app\schedule\update_cache.js execute failed, used 1ms
+2020-08-04 15:33:02,013 ERROR 8736 [Job#159652638201313201464613724003] F:\learn\202007\egg-example\app\schedule\update_cache.js execute error. TypeError: s.subscribe is not a function
+    at Object.task (F:\learn\202007\egg-example\node_modules\egg-schedule\lib\load_schedule.js:37:22)
+    at Messenger.<anonymous> (F:\learn\202007\egg-example\node_modules\egg-schedule\app.js:46:21)
+    at Messenger.emit (events.js:311:20)
+    at Messenger._onMessage (F:\learn\202007\egg-example\node_modules\egg\lib\core\messenger\ipc.js:116:12)
+    at process.emit (events.js:323:22)
+    at emit (internal/child_process.js:876:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+2020-08-04 15:33:02,014 ERROR 8736 [Job#159652638201313201464613724003] F:\learn\202007\egg-example\app\schedule\update_cache.js execute failed, used 1ms
+2020-08-04 15:33:05,014 ERROR 8736 [Job#159652638501313201494617911004] F:\learn\202007\egg-example\app\schedule\update_cache.js execute error. TypeError: s.subscribe is not a function
+    at Object.task (F:\learn\202007\egg-example\node_modules\egg-schedule\lib\load_schedule.js:37:22)
+    at Messenger.<anonymous> (F:\learn\202007\egg-example\node_modules\egg-schedule\app.js:46:21)
+    at Messenger.emit (events.js:311:20)
+    at Messenger._onMessage (F:\learn\202007\egg-example\node_modules\egg\lib\core\messenger\ipc.js:116:12)
+    at process.emit (events.js:323:22)
+    at emit (internal/child_process.js:876:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+2020-08-04 15:33:05,014 ERROR 8736 [Job#159652638501313201494617911004] F:\learn\202007\egg-example\app\schedule\update_cache.js execute failed, used 0ms
+2020-08-04 15:33:08,014 ERROR 8736 [Job#159652638801313201524620335005] F:\learn\202007\egg-example\app\schedule\update_cache.js execute error. TypeError: s.subscribe is not a function
+    at Object.task (F:\learn\202007\egg-example\node_modules\egg-schedule\lib\load_schedule.js:37:22)
+    at Messenger.<anonymous> (F:\learn\202007\egg-example\node_modules\egg-schedule\app.js:46:21)
+    at Messenger.emit (events.js:311:20)
+    at Messenger._onMessage (F:\learn\202007\egg-example\node_modules\egg\lib\core\messenger\ipc.js:116:12)
+    at process.emit (events.js:323:22)
+    at emit (internal/child_process.js:876:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+2020-08-04 15:33:08,014 ERROR 8736 [Job#159652638801313201524620335005] F:\learn\202007\egg-example\app\schedule\update_cache.js execute failed, used 0ms
+2020-08-04 15:33:11,015 ERROR 8736 [Job#159652639101413201554627067996] F:\learn\202007\egg-example\app\schedule\update_cache.js execute error. TypeError: s.subscribe is not a function
+    at Object.task (F:\learn\202007\egg-example\node_modules\egg-schedule\lib\load_schedule.js:37:22)
+    at Messenger.<anonymous> (F:\learn\202007\egg-example\node_modules\egg-schedule\app.js:46:21)
+    at Messenger.emit (events.js:311:20)
+    at Messenger._onMessage (F:\learn\202007\egg-example\node_modules\egg\lib\core\messenger\ipc.js:116:12)
+    at process.emit (events.js:323:22)
+    at emit (internal/child_process.js:876:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+2020-08-04 15:33:11,015 ERROR 8736 [Job#159652639101413201554627067996] F:\learn\202007\egg-example\app\schedule\update_cache.js execute failed, used 1ms
+2020-08-04 15:33:14,015 ERROR 8736 [Job#159652639401413201584630623007] F:\learn\202007\egg-example\app\schedule\update_cache.js execute error. TypeError: s.subscribe is not a function
+    at Object.task (F:\learn\202007\egg-example\node_modules\egg-schedule\lib\load_schedule.js:37:22)
+    at Messenger.<anonymous> (F:\learn\202007\egg-example\node_modules\egg-schedule\app.js:46:21)
+    at Messenger.emit (events.js:311:20)
+    at Messenger._onMessage (F:\learn\202007\egg-example\node_modules\egg\lib\core\messenger\ipc.js:116:12)
+    at process.emit (events.js:323:22)
+    at emit (internal/child_process.js:876:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+2020-08-04 15:33:14,015 ERROR 8736 [Job#159652639401413201584630623007] F:\learn\202007\egg-example\app\schedule\update_cache.js execute failed, used 0ms
+2020-08-04 15:33:17,015 ERROR 8736 [Job#159652639701413201614631594008] F:\learn\202007\egg-example\app\schedule\update_cache.js execute error. TypeError: s.subscribe is not a function
+    at Object.task (F:\learn\202007\egg-example\node_modules\egg-schedule\lib\load_schedule.js:37:22)
+    at Messenger.<anonymous> (F:\learn\202007\egg-example\node_modules\egg-schedule\app.js:46:21)
+    at Messenger.emit (events.js:311:20)
+    at Messenger._onMessage (F:\learn\202007\egg-example\node_modules\egg\lib\core\messenger\ipc.js:116:12)
+    at process.emit (events.js:323:22)
+    at emit (internal/child_process.js:876:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+2020-08-04 15:33:17,015 ERROR 8736 [Job#159652639701413201614631594008] F:\learn\202007\egg-example\app\schedule\update_cache.js execute failed, used 0ms
+2020-08-04 15:33:20,016 ERROR 8736 [Job#159652640001513201644640458009] F:\learn\202007\egg-example\app\schedule\update_cache.js execute error. TypeError: s.subscribe is not a function
+    at Object.task (F:\learn\202007\egg-example\node_modules\egg-schedule\lib\load_schedule.js:37:22)
+    at Messenger.<anonymous> (F:\learn\202007\egg-example\node_modules\egg-schedule\app.js:46:21)
+    at Messenger.emit (events.js:311:20)
+    at Messenger._onMessage (F:\learn\202007\egg-example\node_modules\egg\lib\core\messenger\ipc.js:116:12)
+    at process.emit (events.js:323:22)
+    at emit (internal/child_process.js:876:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+2020-08-04 15:33:20,016 ERROR 8736 [Job#159652640001513201644640458009] F:\learn\202007\egg-example\app\schedule\update_cache.js execute failed, used 0ms
+2020-08-04 15:33:23,019 ERROR 8736 [Job#1596526403017132016746603100010] F:\learn\202007\egg-example\app\schedule\update_cache.js execute error. TypeError: s.subscribe is not a function
+    at Object.task (F:\learn\202007\egg-example\node_modules\egg-schedule\lib\load_schedule.js:37:22)
+    at Messenger.<anonymous> (F:\learn\202007\egg-example\node_modules\egg-schedule\app.js:46:21)
+    at Messenger.emit (events.js:311:20)
+    at Messenger._onMessage (F:\learn\202007\egg-example\node_modules\egg\lib\core\messenger\ipc.js:116:12)
+    at process.emit (events.js:323:22)
+    at emit (internal/child_process.js:876:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+2020-08-04 15:33:23,020 ERROR 8736 [Job#1596526403017132016746603100010] F:\learn\202007\egg-example\app\schedule\update_cache.js execute failed, used 1ms
+2020-08-04 15:33:26,019 ERROR 8736 [Job#1596526406018132017046697449911] F:\learn\202007\egg-example\app\schedule\update_cache.js execute error. TypeError: s.subscribe is not a function
+    at Object.task (F:\learn\202007\egg-example\node_modules\egg-schedule\lib\load_schedule.js:37:22)
+    at Messenger.<anonymous> (F:\learn\202007\egg-example\node_modules\egg-schedule\app.js:46:21)
+    at Messenger.emit (events.js:311:20)
+    at Messenger._onMessage (F:\learn\202007\egg-example\node_modules\egg\lib\core\messenger\ipc.js:116:12)
+    at process.emit (events.js:323:22)
+    at emit (internal/child_process.js:876:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+2020-08-04 15:33:26,019 ERROR 8736 [Job#1596526406018132017046697449911] F:\learn\202007\egg-example\app\schedule\update_cache.js execute failed, used 0ms
+2020-08-04 15:33:29,019 ERROR 8736 [Job#1596526409019132017346737790012] F:\learn\202007\egg-example\app\schedule\update_cache.js execute error. TypeError: s.subscribe is not a function
+    at Object.task (F:\learn\202007\egg-example\node_modules\egg-schedule\lib\load_schedule.js:37:22)
+    at Messenger.<anonymous> (F:\learn\202007\egg-example\node_modules\egg-schedule\app.js:46:21)
+    at Messenger.emit (events.js:311:20)
+    at Messenger._onMessage (F:\learn\202007\egg-example\node_modules\egg\lib\core\messenger\ipc.js:116:12)
+    at process.emit (events.js:323:22)
+    at emit (internal/child_process.js:876:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+2020-08-04 15:33:29,019 ERROR 8736 [Job#1596526409019132017346737790012] F:\learn\202007\egg-example\app\schedule\update_cache.js execute failed, used 0ms
+2020-08-04 15:33:32,020 ERROR 8736 [Job#1596526412019132017646825420013] F:\learn\202007\egg-example\app\schedule\update_cache.js execute error. TypeError: s.subscribe is not a function
+    at Object.task (F:\learn\202007\egg-example\node_modules\egg-schedule\lib\load_schedule.js:37:22)
+    at Messenger.<anonymous> (F:\learn\202007\egg-example\node_modules\egg-schedule\app.js:46:21)
+    at Messenger.emit (events.js:311:20)
+    at Messenger._onMessage (F:\learn\202007\egg-example\node_modules\egg\lib\core\messenger\ipc.js:116:12)
+    at process.emit (events.js:323:22)
+    at emit (internal/child_process.js:876:12)
+    at processTicksAndRejections (internal/process/task_queues.js:85:21)
+2020-08-04 15:33:32,020 ERROR 8736 [Job#1596526412019132017646825420013] F:\learn\202007\egg-example\app\schedule\update_cache.js execute failed, used 0ms
+2020-08-04 16:01:27,263 ERROR 21168 [-/::1/-/4ms GET /] nodejs.TypeError: Cannot read property 'query' of undefined
+    at Application.get myQuery [as myQuery] (F:\learn\202007\egg-example\app\extend\application.js:30:21)
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:49)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\learn\202007\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+
+pid: 21168
+hostname: DESKTOP-130PVM6
+
+2020-08-04 16:02:24,194 ERROR 2948 [-/::1/-/4ms GET /] nodejs.TypeError: Cannot read property 'query' of undefined
+    at Object.query (F:\learn\202007\egg-example\node_modules\delegates\index.js:72:24)
+    at Application.get myQuery [as myQuery] (F:\learn\202007\egg-example\app\extend\application.js:30:25)
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:49)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\learn\202007\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+
+pid: 2948
+hostname: DESKTOP-130PVM6
+
+2020-08-04 16:06:38,057 ERROR 15852 [-/::1/-/4ms GET /?a=1&b=2] nodejs.TypeError: Cannot read property 'url' of undefined
+    at Object.get url [as url] (F:\learn\202007\egg-example\node_modules\koa\lib\request.js:78:21)
+    at Application.get myQuery [as myQuery] (F:\learn\202007\egg-example\app\extend\application.js:30:30)
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:49)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\learn\202007\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+
+pid: 15852
+hostname: DESKTOP-130PVM6
+
+2020-08-04 16:07:28,963 ERROR 17064 [-/::1/-/4ms GET /?a=1&b=2] nodejs.TypeError: Cannot read property 'toJSON' of undefined
+    at Object.toJSON (F:\learn\202007\egg-example\node_modules\koa\lib\context.js:50:29)
+    at Object.inspect (F:\learn\202007\egg-example\node_modules\koa\lib\context.js:33:17)
+    at formatValue (internal/util/inspect.js:693:31)
+    at inspect (internal/util/inspect.js:264:10)
+    at formatWithOptions (internal/util/inspect.js:1865:40)
+    at Object.Console.<computed> (internal/console/constructor.js:281:10)
+    at Object.log (internal/console/constructor.js:291:61)
+    at Application.get myQuery [as myQuery] (F:\learn\202007\egg-example\app\extend\application.js:30:13)
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:49)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+
+pid: 17064
+hostname: DESKTOP-130PVM6
+
+2020-08-04 16:09:31,101 ERROR 10224 [-/::1/-/4ms GET /?a=1&b=2] nodejs.TypeError: this.app.myCache.set is not a function
+    at HomeController.index (F:\learn\202007\egg-example\app\controller\home.js:8:57)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\learn\202007\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:45:18)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:44:32)
+    at F:\learn\202007\egg-example\node_modules\@eggjs\router\node_modules\koa-compose\index.js:36:12
+
+pid: 10224
+hostname: DESKTOP-130PVM6
+

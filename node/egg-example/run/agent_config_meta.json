@@ -152,6 +152,14 @@
     "lstripBlocks": "F:\\learn\\202007\\egg-example\\node_modules\\egg-view-nunjucks\\config\\config.default.js",
     "cache": "F:\\learn\\202007\\egg-example\\node_modules\\egg-view-nunjucks\\config\\config.local.js"
   },
+  "mysql": {
+    "default": {
+      "database": "F:\\learn\\202007\\egg-example\\node_modules\\egg-mysql\\config\\config.default.js",
+      "connectionLimit": "F:\\learn\\202007\\egg-example\\node_modules\\egg-mysql\\config\\config.default.js"
+    },
+    "app": "F:\\learn\\202007\\egg-example\\node_modules\\egg-mysql\\config\\config.default.js",
+    "agent": "F:\\learn\\202007\\egg-example\\node_modules\\egg-mysql\\config\\config.default.js"
+  },
   "env": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
   "name": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
   "cookies": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
@@ -174,6 +182,7 @@
     "license": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
     "dependencies": {
       "egg": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
+      "egg-mysql": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
       "egg-view-nunjucks": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
       "koa-compress": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
       "koa-is-json": "F:\\learn\\202007\\egg-example\\node_modules\\egg\\config\\config.default.js",
