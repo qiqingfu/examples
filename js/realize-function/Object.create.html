@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  /**
+   * Object.create(proto[，propertiesObject])
+   * 用于创建一个新对象，使用现有的对象来提供新创建的对象的__proto__。
+   */
+
+  function mockObjectCreateFunction(proto, propertiesObject) {
+    function F() {}
+
+    F.prototype = proto
+    let f = new F()
+
+    if (null !== propertiesObject && typeof propertiesObject === 'object') {
+      f = Object.defineProperties(f, propertiesObject)
+    }
+    return f
+  }
+
+  const proto = {a: 1}
+
+  const foo = mockObjectCreateFunction(proto, {
+    name: {
+      value: 'zhangsan'
+    }
+  })
+  console.log(foo);
+</script>
+</body>
+</html>
