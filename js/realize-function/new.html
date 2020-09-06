@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  /**
+   * new 运算符创建一个用户自定义的对象类型的实例或具有构造函数的内置对象的实例
+   */
+
+  /**
+   * Constructor 构造函数
+   * ...args 参数
+   */
+  function mockNewFunction() {
+    const Constructor = Array.prototype.shift.call(arguments)
+    if (typeof Constructor !== 'function') throw new Error(`第一个参数必须是函数`)
+
+    const obj = {}
+    obj.__proto__ = Constructor.prototype
+    const result = Constructor.apply(obj, arguments)
+    return result instanceof Object ? result : obj
+  }
+
+  const Foo1 = function (a, b, c) {
+    this.a = a
+    this.b = b
+    this.c = c
+  }
+
+  Foo1.prototype.getAttr = function (attr) {
+    return this[attr]
+  }
+
+  const foo1 = mockNewFunction(Foo1, 'a', 'b', 'c')
+  console.log(foo1)
+  console.log(foo1.getAttr('a'))
+
+</script>
+</body>
+</html>

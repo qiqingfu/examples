@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  /**
+   * call 是函数原型对象上的方法，任何一个函数都可以通过 call 方法调用
+   * call 方法使用一个指定的 this 值和单独给出的一个或多个参数来调用一个函数
+   */
+
+  if (!Function.prototype.mockCallFunction) {
+    Function.prototype.mockCallFunction = function (context, ...args) {
+      const ctx = context || window
+      ctx.fn = this
+      const result = ctx.fn(...args)
+      delete ctx.fn
+
+      return result
+    }
+  }
+
+  function Product(name, price) {
+    this.name = name
+    this.price = price
+  }
+
+  function Food(name, price) {
+    Product.mockCallFunction(this, name, price)
+    this.category = 'food'
+  }
+
+  console.log(new Food('cheese', 5));
+
+</script>
+</body>
+</html>

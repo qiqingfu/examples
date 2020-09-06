@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  /**
+   * call() 方法的作用和 apply() 方法类似，区别就是 call() 方法接受的是参数列表，而 apply() 方法接受的是一个参数数组
+   */
+  // const array = ['a', 'b']
+  // const elements = [0, 1, 2]
+  // array.push.apply(array, elements)
+  // console.info(array) // ["a", "b", 0, 1, 2]
+
+  if (!Function.prototype.mockApplyFunction) {
+    Function.prototype.mockApplyFunction = function (context, arr) {
+      let ctx = context || window
+      let result
+      ctx.fn = this
+
+      if (!arr) {
+        result = ctx.fn()
+      } else {
+        const args = []
+        for (let i = 1; i < arr.length; i++) {
+          args.push('arr[' + i + ']')
+        }
+        result = eval('ctx.fn(' + args + ')')
+      }
+      delete ctx.fn
+      return result
+    }
+  }
+
+  const numbers = [5, 6, 2, 3, 7]
+
+  const max = Math.max.mockApplyFunction(null, numbers)
+
+  console.log(max)
+  // expected output: 7
+
+  const min = Math.min.mockApplyFunction(null, numbers)
+
+  console.log(min)
+
+</script>
+</body>
+</html>
