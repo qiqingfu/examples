@@ -6,6 +6,7 @@ const path = require('path');
 const fs = require('fs');
 const url = require('url');
 const mime = require('mime');
+const fresh = require("fresh");
 
 /**
  * 是否开启协商缓存
@@ -94,8 +95,6 @@ function statTag(stat) {
 }
 
 function send(req, res, filePath) {
-  let modified = req.headers['if-modified-since'];
-  let etag = req.headers['if-none-match'];
   let type, mtime, content, weak;
 
   fs.stat(filePath, function (err, stats) {
@@ -106,27 +105,7 @@ function send(req, res, filePath) {
     type = mime.getType(filePath);
     mtime = toUTCTime(stats.mtime);
     res.setHeader('Content-Type', `${type}; charset=utf8`);
-    weak = 'W/' + statTag(stats);
-
-    /**
-     * 命中 Etag 协商缓存, 服务器资源为发生改变, 则使用客户端缓存
-     */
-    if (etag && etag === weak) {
-      res.statusCode = 304;
-      return setHeader(res, () => {
-        res.setHeader('ETag', weak);
-      });
-    }
-
-    /**
-     * 协商缓存, 如果客户端缓存资源依然新鲜, 服务器资源未发生改变, 则使用客户端缓存
-     */
-    if (modified === mtime) {
-      res.statusCode = 304;
-      return setHeader(res, () => {
-        res.setHeader('Last-Modified', toUTCTime(mtime));
-      });
-    }
+    weak = statTag(stats);
 
     if (NEGOTIATE_CACHE_TYPES.etag) {
       res.setHeader('ETag', weak);
@@ -136,9 +115,28 @@ function send(req, res, filePath) {
       res.setHeader('Last-Modified', toUTCTime(mtime));
     }
 
+    /**
+     * 服务器资源是否为新鲜的, 如果不是最新鲜的则继续使用浏览器缓存
+     */
+    if (isFresh(req, res)) {
+      res.statusCode = 304;
+      return setHeader(res, () => {
+        res.setHeader('ETag', weak);
+        res.setHeader('Last-Modified', toUTCTime(mtime));
+      });
+    }
+
+
     content = fs.readFileSync(filePath);
     setHeader(res, content);
   });
 }
 
-server.listen(3001);
+function isFresh (req, res) {
+  return fresh(req.headers, {
+    'etag': res.getHeader('ETag'),
+    'last-modified': res.getHeader('Last-Modified')
+  })
+}
+
+server.listen(3002);
