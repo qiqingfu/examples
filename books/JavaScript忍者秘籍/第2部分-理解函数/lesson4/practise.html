@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  function hr (text = '==') {
+    console.log(`====================${ text }========================`)
+  }
+
+  function logger(text, cb) {
+    hr(text)
+    cb()
+    hr(text)
+  }
+
+  function sum (...rest) {
+    return rest.reduce((n, c) => n + c, 0)
+  }
+
+  logger('练习1', function () {
+    console.log(sum(1, 2, 3, 4))
+  })
+
+
+  function getSamurai(samurai) {
+    'use strict'
+
+    arguments[0] = "Ishida"
+    return samurai
+  }
+
+  function getNinja (ninja) {
+    arguments[0] = 'Fuma'
+    return ninja
+  }
+
+  logger('运行以下代码，ninja与samurai的值是多少?', function () {
+    console.log(getSamurai('Toyotomi'))
+    console.log(getNinja('Yoshi'))
+  })
+
+  function Ninja () {
+    // this 是构造函数创建的新实例对象, 不是 window 对象
+    this.whoAmI = () => this
+    this.type = 'n1'
+  }
+
+  const n1 = new Ninja()
+  const n2 = {
+    whoAmI: n1.whoAmI,
+    type: 'n2'
+  }
+
+logger('第五练习题', function () {
+  console.log(n1.whoAmI())
+  console.log(n2.whoAmI())
+})
+
+
+  // 6
+  function Foo () {
+    this.type = 'foo'
+    this.whoAmI = function () {
+      return this
+    }.bind(this)
+  }
+
+  const foo = new Foo()
+  const bar = {
+    whoAmI: foo.whoAmI,
+    type: 'bar'
+  }
+
+logger('第六题', function () {
+  console.log(foo.whoAmI())
+  console.log(bar.whoAmI())
+})
+
+
+
+</script>
+</body>
+</html>

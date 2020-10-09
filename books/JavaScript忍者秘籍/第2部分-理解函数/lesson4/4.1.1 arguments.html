@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  function whatever (a, b, c) {
+    console.log(a, b, c)
+    console.log(arguments.length, arguments)
+  }
+
+  whatever(1, 2, 3, 4, 5)
+
+  // 通过 arguments 求和
+  // (...) 通过剩余参数
+  function sum (...rest) {
+    let sum = 0
+    for (let i = 0; i < rest.length; i++) {
+      sum += rest[i]
+    }
+
+    return sum
+  }
+
+  console.log(sum(1, 2, 3))
+
+  // arguments 对象作为函数参数的别名
+  function infiltrate (person) {
+    'use strict'
+    console.log(person === 'zs')
+    console.log(arguments[0] === 'zs')
+
+    arguments[0] = 'ls'
+    console.log(person === 'ls')
+    console.log(arguments[0] === 'ls')
+
+    person = 'ww'
+    console.log(person === 'ww')
+    console.log(arguments[0] === 'ww')
+  }
+
+  infiltrate('zs')
+
+</script>
+</body>
+</html>
