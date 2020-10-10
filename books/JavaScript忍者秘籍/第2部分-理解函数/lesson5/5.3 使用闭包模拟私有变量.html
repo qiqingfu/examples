@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  /*****闭包环境*****/
+
+  /**
+   * feints
+   * function () {}
+   */
+
+  /*****闭包环境*****/
+
+  function Ninja () {
+    let feints = 0
+
+    this.getFeints = function () {
+      return feints
+    }
+
+    this.feint = function () {
+      feints++
+    }
+  }
+
+  const ninja1 = new Ninja();
+  ninja1.feint()
+  ninja1.feint()
+  ninja1.feint()
+  console.log(ninja1.getFeints())
+
+  /**
+   * 词法环境：JavaScript 引擎内部用来跟踪标识符与特定变量之间的映射关系。
+   * 在作用域范围内，每次执行代码时，代码结构都获得与之关联的词法环境。例如：每次调用 skulk 函数，都将创建新的函数词法环境。
+   * 此外，需要着重强调的是，内部代码结构可以访问外部代码结构中定义的变量。例如，for 循环可以访问 report 函数、skulk 函数以及全局
+   * 代码中的变量。report 函数可以访问 skulk 函数及全局代码中的变量。skulk 函数可以访问额外变量但仅是全局代码中的变量。
+   */
+
+</script>
+</body>
+</html>
