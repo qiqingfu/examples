@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  function* WeaponGenerator() {
+    yield "Katana"
+    yield "Wakizashi"
+  }
+
+  const gen = WeaponGenerator()
+  let res = gen.next();
+  console.log(res)
+
+  /**
+   * 调用生成器 -> 创建一个迭代器对象，迭代器对象可以与生成器通信
+   *
+   * next
+   */
+
+
+</script>
+</body>
+</html>

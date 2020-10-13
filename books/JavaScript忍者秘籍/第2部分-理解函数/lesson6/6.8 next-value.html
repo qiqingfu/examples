@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  function* NinjaGenerator (action) {
+    const imposter = yield ("Hattori " + action)
+
+    console.log("imposter =>", imposter)
+    yield ("Yoshi (" + imposter + ")" + action)
+  }
+
+  const ninjaIterator = NinjaGenerator("skulk")
+  const result1 = ninjaIterator.next();
+
+  console.log(result1.value)
+  const result2 = ninjaIterator.next("Hello")
+  console.log(result2.value)
+
+</script>
+</body>
+</html>
