@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  /**
+   * 简版的对象式的发布订阅
+   *
+   * 发布者, 售楼处
+   * 订阅者, 用户
+   */
+
+  const salesOffices = {}
+  salesOffices.clientList = []
+
+  /**
+   * 通过 listen 进行订阅
+   */
+  salesOffices.listen = function (key, fn) {
+    if (!this.clientList[key]) {
+      this.clientList[key] = []
+    }
+    this.clientList[key].push(fn)
+  }
+
+  salesOffices.trigger = function () {
+    const key = Array.prototype.shift.call(arguments)
+    const fns = this.clientList[key]
+    if (!fns || fns.length < 1) {
+      return false
+    }
+
+    for (let i = 0; i < fns.length; i++) {
+      fns[i].apply(this, arguments)
+    }
+  }
+
+  /**
+   * test
+   */
+  salesOffices.listen('80m', function (obj) {
+    console.log(obj)
+  })
+
+  salesOffices.listen('100m', function (obj) {
+    console.log(obj)
+  })
+
+  /**
+   * 发布
+   */
+  delay(2000, function () {
+    salesOffices.trigger('80m', {
+      loc: "QINGDAO",
+      area: "80m",
+      price: 1200000
+    })
+  })
+
+  delay(4000, function () {
+    salesOffices.trigger('100m', {
+      loc: "QINGDAO",
+      area: "100m",
+      price: 1500000
+    })
+  })
+
+  function delay (time, fn) {
+    setTimeout(fn, time)
+  }
+
+</script>
+</body>
+</html>
