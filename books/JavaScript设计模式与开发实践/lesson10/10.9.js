@@ -1,4 +1,8 @@
 /**
+ * 引用父对象,对当前组合对象删除
+ * 类似双向链表的数据结构
+ */
+/**
  * 分别创建宏对象与叶对象
  *
  * 1.宏对象可正常调用 add 添加宏对象或叶对象
@@ -8,12 +12,22 @@
 class Leaf {
   constructor(msg) {
     this.msg = msg
+    this.parent = null
   }
   execute() {
     console.log(this.msg)
   }
   add() {
     throw new Error("叶节点不能添加子节点")
+  }
+  remove() {
+    if (!this.parent) return
+
+    this.parent.leafs.forEach((leaf, i) => {
+      if (leaf === this) {
+        this.parent.leafs.splice(i, 1)
+      }
+    })
   }
 }
 
@@ -22,6 +36,7 @@ class Composition {
     this.leafs = []
   }
   add(leaf) {
+    leaf.parent = this
     this.leafs.push(leaf)
   }
   execute() {
@@ -38,5 +53,7 @@ const composition = new Composition()
 composition.add(closeDoorLeaf)
 composition.add(openPcLeaf)
 composition.add(openQQLeaf)
+
+openQQLeaf.remove()
 
 composition.execute()
