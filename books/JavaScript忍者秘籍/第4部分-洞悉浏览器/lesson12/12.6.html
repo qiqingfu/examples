@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div {
+      font-size: 1.8em;
+      border: 0px solid red;
+    }
+  </style>
+</head>
+<body>
+<div style="color: bisque; background-color: #ccc" title="div tag">Hello</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const div = document.querySelector('div')
+
+    div.style.borderWidth = '4px'
+
+    console.log(div.style['background-color'])
+    console.log(div.style.color)
+    console.log(div.style.fontSize)
+    console.log(div.style.borderWidth)
+  })
+</script>
+</body>
+</html>
