@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  /**
+   * AOP
+   */
+  Function.prototype.before = function (beforeFn) {
+    /**
+     * 通过 _self 将原始函数保存在闭包环境中
+     *
+     * example:
+     *  fn.before(function log1() {})
+     *
+     *  _self = fn
+     *  beforeFn = function log1() {}
+     */
+    const _self = this
+    return function () {
+      beforeFn.apply(this, arguments)
+      _self.apply(this, arguments)
+    }
+  }
+
+  Function.prototype.after = function (afterFn) {
+    /**
+     * 通过 _self 将原始函数保存在闭包环境中
+     *
+     * example1:
+     *  fn.after(function log2 () {})
+     *
+     *  _self = fn
+     *  afterFn = function log2() {}
+     *
+     * example2:
+     *  const fn1 = fn.before(function log3 () {})
+     *  fn1.after(function log4() {})
+     *
+     *  _self = function () {
+     *    beforeFn.apply(this, arguments)
+     *    _self.apply(this, arguments)
+     *  }
+     *  afterFn = function log4() {}
+     */
+    const _self = this
+    return function () {
+      const ret = _self.apply(this, arguments)
+      afterFn.apply(this, arguments)
+      return ret
+    }
+  }
+
+  window.onload = function () {
+    console.log("加载完毕")
+  }
+
+  window.onload = (window.onload || function () {}).before(function () {
+    console.log("start load")
+  })
+</script>
+</body>
+</html>
