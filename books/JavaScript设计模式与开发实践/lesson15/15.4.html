@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  window.onload = function () {
+    console.log('onLoad')
+  }
+
+  const _onLoad = window.onload.bind(window)
+
+  window.onload = function () {
+    _onLoad()
+    console.log('onLoad2')
+  }
+
+</script>
+</body>
+</html>
