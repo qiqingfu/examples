@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .outerContainer {
+      width: 300px;
+      height: 300px;
+      border: solid 1px #cccccc;
+    }
+    .innerContainer {
+      width: 150px;
+      height: 150px;
+      background: green;
+      border: solid 1px #cccccc;
+    }
+  </style>
+</head>
+<body>
+<div class="outerContainer">
+  outerContainer
+  <div class="innerContainer">
+    innerContainer
+  </div>
+</div>
+<script>
+  const outerContainer = document.querySelector('.outerContainer')
+  const innerContainer = document.querySelector('.innerContainer')
+
+  outerContainer.addEventListener('click', function () {
+    console.log('log: outerContainer')
+  })
+
+  innerContainer.addEventListener('click', function () {
+    console.log('log: innerContainer')
+  })
+
+  document.addEventListener('click', function () {
+    console.log('log: body')
+  })
+
+</script>
+</body>
+</html>
