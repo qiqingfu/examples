@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    /**
+     * 引入 daiyjs 时间库
+     *
+     * 服务器返回一个订单的创建时间  2021-01-05 18:00:00
+     * 还有一个服务器的当前时间, 和客户端保持一致, 作用防止客户端时间被篡改
+     *
+     * 从订单创建那一刻开始, 90分钟内未结算, 则系统自动关闭该订单。期间进行订单关闭的倒计时
+     *
+     * 初始时间为订单创建时间: 2021-01-05 18:00:00
+     *  1. 需要将该字符串时间转换为时间戳(ms)
+     *  2. 再将 ms 时间戳转化为 s
+     *  3. 如果创建订单事件本身为数字(ms), 直接进行第二步
+     *
+     * 结束时间为创建时间 + 90分钟
+     *  1. 将 90 分钟转化为 ms
+     *  2. 将订单创建时间的时间戳(ms) + 90分钟转换后的 ms
+     *  3. 相加的值 ms 再通过 t/1000 转化为 s
+     *
+     * 创建时间(c)与结束时间(e)的相差秒
+     *  1. e - c = s
+     *  2. 如果 s < 0, 则说明倒计时已结束
+     *  3. 开启 setInterval 倒计时, 每秒钟 s--
+     *  4. 将 s-- 后的最新值(s), 转成需要输出的格式, 如 xx:xx:xx, xx/xx/xx
+     */
+
+    const createTime = "2021-01-05 18:00:00";
+    const LIMITS = 60 * 7;
+
+    const startTimestamp = dayjs(createTime).unix();
+    const limitSecond = minuteToSecond(LIMITS);
+    const endTimestamp = startTimestamp + limitSecond;
+
+    countDown(endTimestamp, ({ h, m, s }) => {
+      return `${h}:${m}:${s}`;
+    });
+
+    /**
+     * @param timestamp - 订单/活动结束时间
+     */
+    function countDown(timestamp, cb) {
+      const currentTimestamp = dayjs(new Date()).unix();
+      let seconds = timestamp - currentTimestamp;
+
+      if (seconds <= 0) {
+        return;
+      }
+
+      const timer = setInterval(() => {
+        seconds--;
+        if (seconds <= 0) {
+          clearInterval(timer);
+        }
+        const text = dateTransform(seconds, cb);
+        console.log(text);
+      }, 1000);
+    }
+
+    function minuteToSecond(minute) {
+      return minute * 60;
+    }
+
+    function dateTransform(seconds, cb) {
+      let [day, hour, minute, second] = [0, 0, 0, 0]; // 初始化
+      if (seconds > 0) {
+        day = Math.floor(seconds / (60 * 60 * 24));
+        hour = Math.floor(seconds / (60 * 60)) - day * 24;
+        minute = Math.floor(seconds / 60) - day * 24 * 60 - hour * 60;
+        second =
+          Math.floor(seconds) - day * 24 * 60 * 60 - hour * 60 * 60 - minute * 60;
+      }
+      // 小于10的，在前面加0
+      day = replenish(day);
+      hour = replenish(hour);
+      minute = replenish(minute);
+      second = replenish(second);
+
+      const fmtRes = `${day}:${hour}:${minute}:${second}`;
+
+      if (cb && typeof cb === "function") {
+        return (
+          cb({
+            d: day,
+            h: hour,
+            m: minute,
+            s: second,
+          }) || fmtRes
+        );
+      }
+
+      return fmtRes;
+    }
+
+    function replenish(n) {
+      return n < 10 ? "0" + n : n;
+    }
+
+  </script>
+</body>
+
+</html>
