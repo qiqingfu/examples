@@ -1,0 +1,13 @@
+{
+  "name": "hot-update-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "serve": "node build.js -w"
+  },
+  "devDependencies": {
+    "estrella": "^1.4.0",
+    "serve-http": "^1.0.6"
+  }
+}
