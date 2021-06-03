@@ -1,1 +1,0 @@
-<!DOCTYPE html><html lang="en"><head>  <meta charset="UTF-8">  <title>Title</title></head><body><script>  /**   * 实现内部迭代器   */  const each = (arr, fn) => {    for (let i = 0; i < arr.length; i++) {      fn.call(arr[i], i, arr[i])    }  }  each([1, 2, 3, 4], (index, item) => {    console.log(index + '-' + item)  })</script></body></html>

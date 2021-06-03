@@ -1,1 +1,0 @@
-<!DOCTYPE html><html lang="en"><head>  <meta charset="UTF-8">  <title>Title</title></head><body><script>  function Person () {}  Person.prototype.dance = function () {}  function Ninja () {}  Ninja.prototype = new Person()  const ninja = new Ninja()  console.log(ninja.constructor === Ninja)  console.log(ninja.constructor === Person)</script></body></html>
