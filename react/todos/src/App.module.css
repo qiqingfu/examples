@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  width: 100%;
+}
+
+.app-container > .wrapper {
+  width: 600px;
+  height: 600px;
+  padding: 20px;
+  margin: 50px auto;
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+}
